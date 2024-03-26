@@ -1,0 +1,146 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+.prinsss h1{
+    color: #011748;
+    text-transform: uppercase;
+}
+
+  
+
+.left-principall>img{
+    width: 650px;
+    height: 330px;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    top: 25px;
+    left: 90px;
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.347) 0px 7px 29px 0px;
+}
+.right-principall{
+    width: 70%;
+    text-align: justify;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 60px;
+}
+
+.right-principall h1{
+    margin-bottom: 20px;
+}
+
+
+.right-principall>p{
+   letter-spacing: 0.5px;
+   word-spacing: 4px;
+}
+.principals-container{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    position: relative;
+    padding: 20px;
+    margin-top: 50px;
+    margin-bottom: 80px;
+}
+
+.left-principall{
+    margin-left: 22%;
+    width: 40%;
+    height: 380px;
+    background: white;
+    position: relative;
+    border-radius: 10px;
+}
+
+
+@media (max-width:1200px) {
+    .left-principall>img{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        margin-top: -50px;
+        margin-left: 400px;
+
+    }
+    .left-principall{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        position: relative;
+    }
+    .right-principall{
+        width: 100%;
+    }
+
+}
+
+
+@media (max-width:850px) {
+        .principal-container{
+        flex-direction: column;
+        gap: 40px;
+        margin-top: 160px;
+    }
+
+    .right-principall p{
+        width: 100%;
+        text-align: justify;
+    }
+
+    .right-principall h1{
+        text-transform: uppercase;
+        font-size: 24px;
+    }
+
+    .left-principall img{
+        width: 380px;
+        left: -43px;
+        margin-left: 0px;
+    }
+
+    .left-principall{
+        background-color: white;
+        width: 80%;
+    }
+
+    .prinsss h1{
+        font-size: 25px;
+    }
+}
+
+@media (max-width:380px){
+    .prinsss h1{
+        font-size: 20px;
+    }
+    .right-principall h1{
+        font-size: 22px;
+    }
+    .right-principall p{
+        margin-bottom: 20px;
+        text-align: justify;
+    }
+
+    .left-principall{
+        background-color: white;
+        width: 80%;
+    }
+
+    
+    .left-principall img{
+        width: 340px;
+        left: -35px;
+        margin-left: 0px;
+    }
+}
+
+

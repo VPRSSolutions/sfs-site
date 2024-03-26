@@ -1,0 +1,139 @@
+.events{
+  text-align: center;
+  margin-top: 2vw;
+  margin-bottom: 2vw;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  padding-bottom: 10px;
+}
+  
+  .events > hr {
+    width: 80px;
+    height: 3px;
+    border-radius: 50px;
+    background: #9001b4;
+    border: none;
+  }
+.event-card{
+   display: flex;
+   flex-wrap: wrap;
+   padding-top: 5px;
+   justify-content: space-evenly;
+   gap: 40px;
+   margin-bottom: 3vw;
+}
+
+.cards>img{
+    width: 16rem;
+}
+.m-card{
+    /* background: #20b2aa; */
+    width: 18rem;
+    height: 20rem;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+
+}
+.m-card>h1{
+    margin-top: 300px;
+    transition: ease-in;
+}
+.cards{
+    width: 21rem;
+    height: auto;
+    padding: 10px 10px 40px 10px;
+    overflow: hidden;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+
+} 
+
+.cards>img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: height 0.7s;
+}
+.card-body{
+    height: 10rem;
+}
+.m-card:hover> .cards{
+   visibility: visible;
+   opacity: 1;
+}
+.m-card:hover>.cards>img{
+    height: 58%;
+}
+
+.card-title{
+    font-size: 16px;
+    margin: 0px;
+    background: #9001b4;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    padding: 2px;
+    margin-bottom: 10px;
+}
+
+
+.card-text{
+    font-size: 14px;
+    color: #011748E8;
+    font-weight: 450;
+}
+.card-body>button{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    padding: 4px 6px 4px 6px;
+    gap: 10px;
+    margin-top: 10px;
+    border: none;
+    background: rgba(7, 197, 255, 0.289);
+    color: black;
+    border-radius: 3px;
+    font-size: 14px;
+    font-family: "poppins", sans-serif;
+    cursor: pointer;
+}
+
+.read{
+    font-size: 20px;
+}
+
+@media (min-width: 1366px) {
+    .m-card .cards{
+        width: 20rem;
+    }
+
+    .event-card{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+@media (max-width:380px) {
+    .events .event-card{
+        padding: 30px;
+    }
+    .events h1{
+        font-size: 18px;
+        gap: 10px;
+    }
+    .events hr{
+        width: 40px;
+    }
+    
+}
+
+

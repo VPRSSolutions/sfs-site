@@ -1,0 +1,374 @@
+.images {
+  margin-right: 20px;
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+.images::-webkit-scrollbar {
+  display: none;
+}
+.slide {
+  flex: 0 0 auto;
+  width: 100%;
+  margin-top: 50px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 1100px) {
+  .slide {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    margin-top: 0px;
+    margin-left: 0px;
+    width: 100%;
+  }
+
+  .sliding-text-container {
+    width: 180%;
+  }
+
+  .slider-image {
+    min-height: 600px;
+  }
+
+  .slider .content p {
+    font-size: 22px;
+  }
+
+  .event .eventss {
+    padding: 0px 10px 0px 10px;
+    gap: 5px;
+  }
+
+  .eventss .banner span {
+    font-size: 11px;
+    text-wrap: nowrap;
+  }
+
+  .eventss .banner p {
+    font-size: 11px;
+  }
+}
+
+@media (max-width:1366px) {
+  .eventss{
+    padding-left: 20px;
+    padding-right: 20px;
+    gap: 20px;
+  }
+}
+
+.content > span > .earth {
+  font-size: 20px;
+  color: white;
+}
+.content > h1 {
+  font-family: "Raleway", sans-serif;
+  font-size: 60px;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.89);
+  padding: 2px 70px;
+  line-height: 70px;
+  display: inline-block;
+  height: 200px;
+  text-wrap: nowrap;
+}
+
+.event {
+  margin-top: 160px;
+}
+.event > h1 {
+  color: #000e2ee8;
+  padding-left: 10px;
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.event > h1 > span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  font-size: 16px;
+  font-weight: normal;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.eventss {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+@media (max-width: 700px) {
+  .eventss {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .banner {
+    min-width: 60%;
+  }
+  .slider-image {
+    min-height: 500px;
+  }
+  .slider .content {
+    justify-content: space-evenly;
+  }
+
+  .content > h1 {
+    font-size: 45px;
+    font-weight: 800;
+    line-height: 70px;
+    height: 130px;
+  }
+}
+@media (max-width: 500px)and(min-width: 900px){
+  .banner{
+    min-width: 140%;
+  }
+}
+@media (max-width: 500px) {
+  .banner {
+    min-width: 80%;
+  }
+  .event > h1 {
+    padding-left: 20px;
+  }
+
+  .images {
+    margin-right: 0px;
+  }
+  .slider .content p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 900px) {
+  .eventss{
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 380px) {
+  .event > h1 {
+    text-wrap: nowrap;
+    font-size: 24px;
+  }
+
+  .images {
+    margin-right: 0px;
+  }
+
+  .slider .content {
+    justify-content: space-evenly;
+  }
+  .content > h1 {
+    font-size: 45px;
+    font-weight: 800;
+    line-height: 70px;
+    height: 130px;
+  }
+
+  .slider .content p {
+    font-size: 16px;
+  }
+}
+.banner {
+  width: 52%;
+  height: 350px;
+  text-align: center;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+.banner > span {
+  font-size: 16px;
+  border-bottom: 2px solid white;
+  margin-bottom: 20px;
+}
+.banner > p {
+  font-size: 13px;
+  height: 60px;
+  margin-top: 20px;
+}
+.banner > img {
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.slider {
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  border-radius: 5px;
+  margin-left: 20px;
+  margin-right: 20px;
+  height: 500px;
+}
+
+.image-container {
+  display: flex;
+  transition: 2s;
+  position: relative;
+  width: 100%;
+}
+
+.swiperr {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.slider-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -10;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  color: rgb(255, 255, 255);
+  z-index: 10;
+  justify-content: center;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.352);
+}
+
+.content > p {
+  font-size: 17px;
+  padding: 2px 60px;
+  margin: 0;
+}
+
+.content > span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 550;
+  font-size: 18px;
+  color: #f6aa1c;
+  padding: 20px 2px 2px 40px;
+  margin-left: 20px;
+  font-family: "poppins", sans-serif; /* Corrected font-family property */
+  letter-spacing: 1px;
+}
+
+.slider-left-button {
+  position: absolute;
+  top: 40%;
+  left: 5%;
+  z-index: 12;
+}
+
+.slider-left-button i {
+  font-size: 10vw;
+}
+.slider-right-button {
+  position: absolute;
+  top: 40%;
+  right: 5%;
+  z-index: 12;
+}
+.slider-right-button i {
+  font-size: 10vw;
+}
+
+.slider-content h1 {
+  font-size: 5vw;
+}
+.slider-content button {
+  padding: 15px 25px 15px 25px;
+  margin-top: 10px;
+  color: #1d232c;
+  border: none;
+  transition: 1s;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.register {
+  position: fixed;
+  left: 20px;
+  bottom: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #1d232c;
+  z-index: 10;
+}
+
+.register > button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 20px;
+  background-color: #011748;
+  outline: none;
+  border: none;
+}
+.register > p {
+  font-size: 16px;
+  font-weight: 500;
+  background-color: #011748;
+  color: white;
+  padding: 3px;
+  border-radius: 4px;
+}
+.slider .swiper-button-next:after {
+  color: white;
+  display: none;
+}
+
+.slider .swiper-button-prev:after {
+  color: white;
+  display: none;
+}
+
+.button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgb(20, 20, 20);
+  border: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 0px 4px rgba(180, 160, 255, 0.253);
+  cursor: pointer;
+  transition-duration: 0.3s;
+  overflow: hidden;
+  position: fixed;
+  z-index: 1000;
+  left: 90%;
+  top: 88%;
+}
+
+.svgIcon {
+  width: 12px;
+  transition-duration: 0.3s;
+}
+
+.svgIcon path {
+  fill: white;
+}

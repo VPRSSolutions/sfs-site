@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&family=Outfit&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+.contact-info {
+  font-family: "poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  /* background-color: rgb(0, 24, 75); */
+  background: rgb(37, 0, 106);
+  background: linear-gradient(
+    0deg,
+    rgba(37, 0, 106, 1) 0%,
+    rgba(5, 2, 129, 1) 100%
+  );
+  color: white;
+  padding: 40px 0px;
+}
+.line-content {
+  display: flex;
+  gap: 20px;
+  font-size: 14px;
+}
+.contact-info > hr {
+  width: 30px;
+  border-width: 3px;
+}
+.s-m {
+  display: flex;
+  gap: 50px;
+}
+
+.ffff:hover {
+  background: #011748;
+  color: white;
+}
+.ffff {
+  padding: 10px;
+  border-radius: 50%;
+  background-color: white;
+  color: blue;
+  cursor: pointer;
+}
+.s-mm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.s-mm > hr {
+  width: 380px;
+}
+.contact-info__name {
+  font-weight: 450;
+}
+.c-r {
+  color: rgba(255, 255, 255, 0.705);
+  font-size: 14px;
+}
+.contact-info__affiliations {
+  font-size: 13px;
+  margin-top: 35px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  text-align: center;
+}
+
+.quick {
+  font-size: 17px;
+}
+
+.q-sm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding-bottom: 10px;
+}
+
+.q-sm > hr {
+  width: 50px;
+}
+
+/* public\imagess\annual3.jpg */
+
+.copy {
+  display: flex;
+  flex-direction: row;
+  gap: 800px;
+  margin: 10px;
+}
+
+@media (max-width:1100px) {
+  .copy p{
+    text-wrap: nowrap;
+    font-size: 14px;
+  }
+
+  .copy{
+    gap: 490px;
+  }
+}
+
+@media (min-width: 730px) {
+  .s-mm hr{
+    display: none;
+  }
+}
+
+@media (max-width: 800px) {
+  .line-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .s-mm > hr {
+    display: none;
+  }
+
+  .copy {
+    gap: 20px;
+    text-align: center;
+    flex-direction: column;
+  }
+
+  .copy p {
+    font-size: 12px;
+    text-wrap: nowrap;
+  }
+
+  .s-m {
+    gap: 28px;
+    margin-top: 20px;
+  }
+
+  .contact-info__name {
+    text-align: center;
+  }
+
+  .line-content hr {
+    width: 300px;
+    margin: 0 auto;
+  }
+}

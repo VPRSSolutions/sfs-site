@@ -1,0 +1,150 @@
+.scroll {
+    width: 180px;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+}
+.scroll>div{
+    animation: scroll 20s linear infinite;
+    margin: 0;
+}
+.scroll >div> img {
+    height: 250px;
+    width: 180px;
+    border-radius: 10px;
+    margin: 6px 0px;
+    object-fit: cover;
+    object-position: center;
+    box-shadow: rgba(0, 0, 0, 0.678) 0px 3px 8px;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateY(0%);
+    }
+    100% {
+        transform: translateY(-50%);
+    }
+}
+
+.scroll-1 {
+    width: 180px;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+}
+.scroll-1>div{
+    animation: scrolll 20s linear infinite;
+    margin: 0;
+}
+.scroll-1 >div> img {
+    height: 250px;
+    width: 180px;
+    border-radius: 10px;
+    margin: 6px 0px;
+    object-fit: cover;
+    object-position: center;
+    box-shadow: rgba(0, 0, 0, 0.678) 0px 3px 8px;
+}
+
+@keyframes scrolll {
+    0% {
+        transform: translateY(-50%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+.scroll-2 {
+    width: 180px;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+}
+.scroll-2>div{
+    animation: scroll 20s linear infinite;
+    margin: 0;
+}
+.scroll-2 >div> img {
+    height: 250px;
+    width: 180px;
+    border-radius: 10px;
+    margin: 6px 0px;
+    object-fit: cover;
+    object-position: center;
+    box-shadow: rgba(0, 0, 0, 0.678) 0px 3px 8px;
+}
+
+.main-scroll{
+    display: flex;
+    gap: 10px;
+    padding-right: 40px;
+    border-radius: 6px;
+}
+@media(max-width:500px){
+    .main-scroll{
+        padding-right: 0px;
+    }
+    .scroll>div>img{
+        height: 180px;
+        width: 120px;
+    }
+    .scroll-1>div>img{
+        height: 180px;
+        width: 120px;
+    }
+    .scroll-2>div>img{
+        height: 180px;
+        width: 120px;
+    }
+    .scroll{
+        padding: 0px;
+        width: 120px;
+    }
+    .scroll-1{
+        padding: 0px;
+        width: 120px;
+    }
+    .scroll-2{
+        padding: 0px;
+        width: 120px;
+    }
+}
+
+@media (min-width: 750px) {
+    .main-scroll{
+        padding-right: 0px;
+    }
+}
+
+
+@media(max-width: 400px){
+    .main-scroll{
+        padding-right: 0px;
+    }
+    .scroll>div>img{
+        height: 160px;
+        width: 100px;
+    }
+    .scroll-1>div>img{
+        height: 160px;
+        width: 100px;
+    }
+    .scroll-2>div>img{
+        height: 160px;
+        width: 100px;
+    }
+    .scroll{
+        padding: 0px;
+        width: 100px;
+    }
+    .scroll-1{
+        padding: 0px;
+        width: 100px;
+    }
+    .scroll-2{
+        padding: 0px;
+        width: 100px;
+    }
+}
