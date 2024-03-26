@@ -11,8 +11,6 @@ import ach2 from "../images/ach3.jpg";
 import ach3 from "../images/ach4.jpg";
 import ach6 from "../images/ach6.jpg";
 
-
-
 const Sports = () => {
   return (
     <div className="our-stud">
@@ -57,11 +55,13 @@ const Sports = () => {
             </div>
           </div>
           <div className="sports-cont2">
-            <p><RiDoubleQuotesL /> Congratulations to Sanjay.C,
-              our basketball ace, The District Winner for clinching the district title with
+            <p>
+              <RiDoubleQuotesL /> Congratulations to Sanjay.C, our basketball
+              ace, The District Winner for clinching the district title with
               exceptional skill and sportsmanship! and<br></br>
               Cheers to Sanjay.C representing us at the state level in
-              basketball, showcasing remarkable talent and dedication! <RiDoubleQuotesR />
+              basketball, showcasing remarkable talent and dedication!{" "}
+              <RiDoubleQuotesR />
             </p>
           </div>
         </div>
@@ -78,7 +78,12 @@ const Sports = () => {
               <h4>DISTRICT WINNER</h4>
             </div>
             <p>
-              <RiDoubleQuotesL /> Our junior basketball team has achieved the remarkable feat of claiming the title of district champions, showcasing exceptional talent, teamwork, and dedication. Their victory is a testament to their hard work and perseverance, and we are proud of their accomplishments. Congratulations to our young Players for their outstanding achievement! <RiDoubleQuotesR />
+              <RiDoubleQuotesL /> Our junior basketball team has achieved the
+              remarkable feat of claiming the title of district champions,
+              showcasing exceptional talent, teamwork, and dedication. Their
+              victory is a testament to their hard work and perseverance, and we
+              are proud of their accomplishments. Congratulations to our young
+              Players for their outstanding achievement! <RiDoubleQuotesR />
             </p>
           </div>
         </div>
@@ -98,7 +103,11 @@ const Sports = () => {
               </h4>
             </div>
             <p>
-              <RiDoubleQuotesL /> Kudos to Surenthar.D the Perky Participant for representing the Netball Association of Tamil Nadu at the national level, demonstrating outstanding talent, and sportsmanship. His achievement is truly remarkable and serves as an inspiration to us all other students! <RiDoubleQuotesR />
+              <RiDoubleQuotesL /> Kudos to Surenthar.D the Perky Participant for
+              representing the Netball Association of Tamil Nadu at the national
+              level, demonstrating outstanding talent, and sportsmanship. His
+              achievement is truly remarkable and serves as an inspiration to us
+              all other students! <RiDoubleQuotesR />
             </p>
           </div>
         </div>
@@ -112,10 +121,17 @@ const Sports = () => {
               <p>
                 <span>Abacus</span> - 2024
               </p>
-              <h4></h4>
+              {/* <h4></h4> */}
             </div>
             <p>
-              <RiDoubleQuotesL /> The abacus is a valuable tool for learning mathematics, aiding in developing number sense, arithmetic skills, and mental calculation abilities. It helps students grasp the base-10 system and fundamental arithmetic operations. Using an abacus can also improve concentration, memory, and overall mathematical proficiency.Our school students have excelled taking part in the competition.<RiDoubleQuotesR />
+              <RiDoubleQuotesL /> The abacus is a valuable tool for learning
+              mathematics, aiding in developing number sense, arithmetic skills,
+              and mental calculation abilities. It helps students grasp the
+              base-10 system and fundamental arithmetic operations. Using an
+              abacus can also improve concentration, memory, and overall
+              mathematical proficiency.Our school students have excelled taking
+              part in the competition.
+              <RiDoubleQuotesR />
             </p>
           </div>
         </div>
