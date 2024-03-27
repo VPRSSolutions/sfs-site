@@ -43,11 +43,11 @@ function Navbar() {
 
       <div className="top">
         <div className="sliding-text-container">
-          {/* <div className="sliding-text">
-            Study Tour for 2nd Std On 16th March
-          </div> */}
           <div className="sliding-text">
           Admissions open for the Academics year 2024-2025
+          </div>
+          <div className="sliding-text">
+          KinderGarden Graduation Day - 28.03.2024
           </div>
           <div className="sliding-text">
           Annual exam begins on 2nd April
