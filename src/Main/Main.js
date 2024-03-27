@@ -27,6 +27,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
+import Notice from "./Notice";
 
 function Main() {
   var navigate = useNavigate();
@@ -54,6 +55,7 @@ function Main() {
 
   return (
     <div className="main">
+      <Notice/>
       <div className="register">
         <button
           onClick={() => {

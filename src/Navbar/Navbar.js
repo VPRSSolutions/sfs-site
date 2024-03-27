@@ -12,7 +12,7 @@ function Navbar() {
   const [move, setmove] = useState("");
 
   const [typewriter] = useTypewriter({
-    words: ["Admissions open for the Academics year 2024-2025"],
+    words: ["Admissions open for the Academics year 2024-2025","Qualitative education with High Statndard","Fluent Spoken English and Decipline","Artificial intelligence, coding and Robotics","Foundation Course for (JEE, Neet) Std VI to IX","JEE, NEET coaching for XI","Foreign Languages : German and French VI to IX"],
     loop: {},
     typeSpeed: 80,
     delaySpeed: 40,
@@ -78,7 +78,7 @@ function Navbar() {
         </div>
       </div>
       <div className="bottom">
-        <p>{typewriter}</p>
+        <p style={{color:"white",backgroundColor:"red", padding:"2px",borderRadius:"5px", marginTop:"4px"}}>{typewriter}</p>
       </div>
     </div>
   );

@@ -6,29 +6,28 @@ import { toast } from "react-toastify";
 
 // export let newClassDetail;
 const RegisterForm = () => {
-
   function Submit(e) {
     e.preventDefault();
-
     const formEle = document.querySelector("form");
     const formData = new FormData(formEle);
     fetch(
-      "https://script.google.com/macros/s/AKfycbwzeM_oDCc8QSuq-8eZLXG-oqXZcv5JNT-jymIW28fEFmEBk7rdCMCk4oWbw6YlsVadtg/exec",
+      "https://script.google.com/macros/s/AKfycbye88VYn7I4KkPTEjmS4iMK3hSYefw7jDF7dmDyYDDOCLODKDRVO6lETgHq8pzDkgC0mg/exec",
       {
         method: "POST",
         body: formData
       }
     )
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        toast.success("submitted")
-      })
-      .catch((error) => {
-        console.log(error);
-        toast.success("error")
-      });
+    .then((res) => res.json())
+    .then((data) => {
+      console.log(data);
+      toast.success("submitted");
+    })
+    .catch((error) => {
+      console.log(error);
+      toast.error("error");
+    });
   }
+  
 
   return (
     <div className="main">
@@ -110,23 +109,23 @@ const RegisterForm = () => {
          </div>
          <div>
          <p>7.<span><h4>a,</h4></span>Father's Name and Qualification</p>
-          <input type="text" name="user_fathetqualification" required />
+          <input type="text" name="FathersNameandQualification" required />
          </div>
          <div>
          <p style={{marginLeft:"30px"}}><span><h4>b,</h4></span>Occupation & Income P/M</p>
-          <input type="text" name="user_faincome" required />
+          <input type="text" name="OcuppationIncomeP/M" required />
          </div>
          <div style={{marginBottom:"40px"}}>
          <p style={{marginLeft:"30px"}}><span><h4>c,</h4></span>Mother's Name and Qualification</p>
-          <input type="text" name="user_mNameQualification" required />
+          <input type="text" name="Mothernamequalification" required />
          </div>
          <div>
          <p>8. Home Address of father</p>
-          <input type="text" name="user_homeadd" required  />
+          <input type="text" name="homeaddressfather" required  />
          </div>
          <div style={{marginBottom:"40px"}}>
          <p>9. State to which the parents belong</p>
-          <select id="cities" name="user_parentbelang" className="sel" style={{width:"425px"}}>
+          <select id="cities" name="parentbelong" className="sel" style={{width:"425px"}}>
           <option>Select City</option>
             <option value="ariyalur">Ariyalur</option>
             <option value="chennai">Chennai</option>
@@ -163,25 +162,25 @@ const RegisterForm = () => {
          </div>
          <div>
             <p>10. Pincode </p>
-            <input type="number" name="user_pincode" required />
+            <input type="number" name="pincode " required />
           </div>
          <div>
           <p>11. <span><h4>a,</h4></span>Has the applicant any brothers or sisters<br></br>
           (not cousins) in this school</p>
-          <input type="text" name="user_brosis" required />
+          <input type="text" name="brosister" required />
          </div>
          <div style={{marginBottom:"40px"}}>
          <p style={{marginLeft:"30px"}}><span><h4>b,</h4></span>if so, state name, class and roll number</p>
-          <input type="text" name="user_naclro" required  />
+          <input type="text" name="classroll" required  />
          </div>
 
          <div>
          <p>12. Will the pupil stay with parents or gardian, if<br></br>
          with the gardian, his / her address</p>
-          <input type="text" name="user_gardian" required />
+          <input type="text" name="gardian" required />
          </div>
   
-          <input type="submit" value="Register Now" className="btn-1" />
+          <input type="submit"  name="Name" value="Register Now" className="btn-1" />
          
         </div>
       </form>
