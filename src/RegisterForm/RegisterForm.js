@@ -11,12 +11,12 @@ const RegisterForm = () => {
     e.preventDefault();
 
     const formEle = document.querySelector("staff-form");
-    const formDatab = new FormData(formEle);
+    const formData = new FormData(formEle);
     fetch(
-      "https://script.google.com/macros/s/AKfycbwUf2gVAeHF4PavCDoDF02XEdZmVbCm9oqxsLx6RDaeBUBFDIt4rs4b3gPv8phVEXgSfA/exec",
+      "https://script.google.com/macros/s/AKfycbwzeM_oDCc8QSuq-8eZLXG-oqXZcv5JNT-jymIW28fEFmEBk7rdCMCk4oWbw6YlsVadtg/exec",
       {
         method: "POST",
-        body: formDatab
+        body: formData
       }
     )
       .then((res) => res.json())
