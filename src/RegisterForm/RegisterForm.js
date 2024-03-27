@@ -10,7 +10,7 @@ const RegisterForm = () => {
   function Submit(e) {
     e.preventDefault();
 
-    const formEle = document.querySelector("staff-form");
+    const formEle = document.querySelector("form");
     const formData = new FormData(formEle);
     fetch(
       "https://script.google.com/macros/s/AKfycbwzeM_oDCc8QSuq-8eZLXG-oqXZcv5JNT-jymIW28fEFmEBk7rdCMCk4oWbw6YlsVadtg/exec",
