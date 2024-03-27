@@ -1,34 +1,55 @@
 import "./RegisterForm.css";
+import { toast } from "react-toastify";
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
 import logo from "../images/logo.png";
 import Footer from "../Footer/Footer";
 import Navbar from "../Navbar/Navbar";
-import { toast } from "react-toastify";
+
 
 // export let newClassDetail;
 const RegisterForm = () => {
-  function Submit(e) {
-    e.preventDefault();
-    const formEle = document.querySelector("form");
-    const formData = new FormData(formEle);
-    fetch(
-      "https://script.google.com/macros/s/AKfycbye88VYn7I4KkPTEjmS4iMK3hSYefw7jDF7dmDyYDDOCLODKDRVO6lETgHq8pzDkgC0mg/exec",
-      {
-        method: "POST",
-        body: formData
-      }
-    )
-    .then((res) => res.json())
-    .then((data) => {
-      console.log(data);
-      toast.success("submitted");
-    })
-    .catch((error) => {
-      console.log(error);
-      toast.error("error");
-    });
-  }
-  
+  const form = useRef();
 
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+
+    
+    const pincode  = form.current.user_pincode.value.trim(); // Corrected the field name to user_phone
+
+    // Check if the phone number is exactly 10 digits
+    if (!/^\d{6}$/.test(pincode)) {
+      // If the phone number is not exactly 10 digits, display an error message
+      toast.error("Please check your Pincode");
+      return; // Exit the function early
+    }
+
+    const phoneNumber = form.current.user_number.value.trim(); // Corrected the field name to user_phone
+
+    // Check if the phone number is exactly 10 digits
+    if (!/^\d{10}$/.test(phoneNumber)) {
+      // If the phone number is not exactly 10 digits, display an error message
+      toast.error("Please enter a 10-digit phone number");
+      return; // Exit the function early
+    }
+
+
+    emailjs
+      .sendForm("service_qpoixqc", "template_0fozlbo", form.current, {
+        publicKey: "gmkXX07K07JyAIAF2",
+      })
+      .then(
+        () => {
+          console.log("SUCCESS!");
+          toast.success("Your Application Successfully Submitted");
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+          toast.error("Please Check Your Application");
+        }
+      );
+  };
   return (
     <div className="main">
       <Navbar/>
@@ -47,18 +68,18 @@ const RegisterForm = () => {
         </div>
       </div>
 
-      <form className="staff-form" onSubmit={(e) => Submit(e)}>
+      <form className="staff-form" ref={form} onSubmit={sendEmail}>
         <div className="forms">
 
           <div>
             <p>1. Name of the Pupil (BLOCK LETTERS)</p>
-            <input type="text" name="NameofthePupil" required />
+            <input type="text" name="user_name" required />
           </div>
           <div>
             <p>2. Date of Birth</p>
             <input
               type="date"
-              name="DateofBirth"
+              name="user_dob"
               required
               style={{
                 color: "black",
@@ -68,7 +89,7 @@ const RegisterForm = () => {
           </div>
           <div style={{marginBottom:"40px"}}>
             <p>3.Gender</p>
-            <select style={{width:"425px"}} className="sel" name="Gender">
+            <select style={{width:"425px"}} className="sel" name="user_gender">
               <option>Select Gender</option>
               <option>Male</option>
               <option>Female</option>
@@ -77,55 +98,55 @@ const RegisterForm = () => {
           </div>
           <div>
             <p>4. Phone number </p>
-            <input type="number" name="PhoneNumber" required />
+            <input type="number" name="user_number" required />
           </div>
           <div>
             <p>5. <span><h4>a,</h4></span> Class to which Admission is sought</p>
-            <input type="text" name="ClasstowhichAdmissionissought" required />
+            <input type="text" name="user_admissionfor" required />
           </div>
           <div>
             <p style={{marginLeft:"30px"}}> <span><h4>b,</h4></span> Mother tongue of the Pupil</p>
-            <input type="text" name="MothertongueofthePupil" required />
+            <input type="text" name="user_Mtongue" required />
           </div>
           <div >
             <p style={{marginLeft:"30px"}}> <span><h4>c,</h4></span> School where the Pupil studied <br></br>
             Previously and the class
             </p>
-            <input type="text" name="SchoolwherethePupilstudiedPreviouslyandtheclass" required />
+            <input type="text" name="user_Prevstudied" required />
           </div>
           <div style={{marginBottom:"40px"}}>
             <p style={{marginLeft:"30px"}}> <span><h4>d,</h4></span> Position of the Pupil in the class <br></br>
             Rank / Grade
             </p>
-            <input type="text" name="PositionofthePupilintheclassRank/Grade" required />
+            <input type="text" name="user_classrank" required />
           </div>
          <div>
           <p>6. <span><h4>a,</h4></span>Nationality</p>
-          <input type="text" name="Nationality" required  />
+          <input type="text" name="user_nationality" required  />
          </div>
          <div style={{marginBottom:"40px"}}>
          <p style={{marginLeft:"30px"}}><span><h4>b,</h4></span>Religion</p>
-          <input type="text" name="Religion" required/>
+          <input type="text" name="user_religion" required/>
          </div>
          <div>
          <p>7.<span><h4>a,</h4></span>Father's Name and Qualification</p>
-          <input type="text" name="FathersNameandQualification" required />
+          <input type="text" name="user_fathetqualification" required />
          </div>
          <div>
          <p style={{marginLeft:"30px"}}><span><h4>b,</h4></span>Occupation & Income P/M</p>
-          <input type="text" name="OcuppationIncomeP/M" required />
+          <input type="text" name="user_faincome" required />
          </div>
          <div style={{marginBottom:"40px"}}>
          <p style={{marginLeft:"30px"}}><span><h4>c,</h4></span>Mother's Name and Qualification</p>
-          <input type="text" name="Mothernamequalification" required />
+          <input type="text" name="user_mNameQualification" required />
          </div>
          <div>
          <p>8. Home Address of father</p>
-          <input type="text" name="homeaddressfather" required  />
+          <input type="text" name="user_homeadd" required  />
          </div>
          <div style={{marginBottom:"40px"}}>
          <p>9. State to which the parents belong</p>
-          <select id="cities" name="parentbelong" className="sel" style={{width:"425px"}}>
+          <select id="cities" name="user_parentbelang" className="sel" style={{width:"425px"}}>
           <option>Select City</option>
             <option value="ariyalur">Ariyalur</option>
             <option value="chennai">Chennai</option>
@@ -162,25 +183,25 @@ const RegisterForm = () => {
          </div>
          <div>
             <p>10. Pincode </p>
-            <input type="number" name="pincode " required />
+            <input type="number" name="user_pincode" required />
           </div>
          <div>
           <p>11. <span><h4>a,</h4></span>Has the applicant any brothers or sisters<br></br>
           (not cousins) in this school</p>
-          <input type="text" name="brosister" required />
+          <input type="text" name="user_brosis" required />
          </div>
          <div style={{marginBottom:"40px"}}>
          <p style={{marginLeft:"30px"}}><span><h4>b,</h4></span>if so, state name, class and roll number</p>
-          <input type="text" name="classroll" required  />
+          <input type="text" name="user_naclro" required  />
          </div>
 
          <div>
          <p>12. Will the pupil stay with parents or gardian, if<br></br>
          with the gardian, his / her address</p>
-          <input type="text" name="gardian" required />
+          <input type="text" name="user_gardian" required />
          </div>
   
-          <input type="submit"  name="Name" value="Register Now" className="btn-1" />
+          <input type="submit" value="Register Now" className="btn-1" />
          
         </div>
       </form>
