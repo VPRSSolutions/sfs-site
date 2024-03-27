@@ -8,6 +8,8 @@ import Navbar from "../Navbar/Navbar";
 const RegisterForm = () => {
 
   function Submit(e) {
+    e.preventDefault();
+    
     const formEle = document.querySelector("staff-form");
     const formDatab = new FormData(formEle);
     fetch(
