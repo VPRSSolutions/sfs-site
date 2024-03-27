@@ -43,12 +43,12 @@ function Navbar() {
 
       <div className="top">
         <div className="sliding-text-container">
-          <div className="sliding-text">
+          {/* <div className="sliding-text">
             Study Tour for 2nd Std On 16th March
           </div>
           <div className="sliding-text">
             Industrial Visit for 4th and 9th Std On 23rd March
-          </div>
+          </div> */}
           <div className="sliding-text">
           Annual exam begins on 2nd April
           </div>
