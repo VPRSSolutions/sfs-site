@@ -78,7 +78,7 @@ function Navbar() {
         </div>
       </div>
       <div className="bottom">
-        <p style={{color:"white",backgroundColor:"red", padding:"2px",borderRadius:"5px", marginTop:"4px"}}>{typewriter}</p>
+        <p style={{color:"red", padding:"2px",borderRadius:"5px", marginTop:"4px"}}>{typewriter}</p>
       </div>
     </div>
   );
