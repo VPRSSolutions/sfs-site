@@ -14,7 +14,7 @@ const RegisterForm = () => {
     const formEle = document.querySelector("staff-form");
     const formDatab = new FormData(formEle);
     fetch(
-      "https://script.google.com/macros/s/AKfycbztqtYLSLTk_dIJbfvjMaqQl1X4f3_SRe_TKHA9tvcfCI8wdGJ0GzBGBU7qeDeR0n1taw/exec",
+      "https://script.google.com/macros/s/AKfycbw8uEm-6Ilg9n8SztRp0k0N25hZUF8KFo4nHvibs5_l1DGlLSFdADm_2xSQHPl-DDA7Cw/exec",
       {
         method: "POST",
         body: formDatab
@@ -52,13 +52,13 @@ const RegisterForm = () => {
 
           <div>
             <p>1. Name of the Pupil (BLOCK LETTERS)</p>
-            <input type="text" name="user_name" required />
+            <input type="text" name="NameofthePupil" required />
           </div>
           <div>
             <p>2. Date of Birth</p>
             <input
               type="date"
-              name="user_dob"
+              name="DateofBirth"
               required
               style={{
                 color: "black",
@@ -68,7 +68,7 @@ const RegisterForm = () => {
           </div>
           <div style={{marginBottom:"40px"}}>
             <p>3.Gender</p>
-            <select style={{width:"425px"}} className="sel" name="user_gender">
+            <select style={{width:"425px"}} className="sel" name="Gender">
               <option>Select Gender</option>
               <option>Male</option>
               <option>Female</option>
@@ -77,35 +77,35 @@ const RegisterForm = () => {
           </div>
           <div>
             <p>4. Phone number </p>
-            <input type="number" name="user_number" required />
+            <input type="number" name="PhoneNumber" required />
           </div>
           <div>
             <p>5. <span><h4>a,</h4></span> Class to which Admission is sought</p>
-            <input type="text" name="user_admissionfor" required />
+            <input type="text" name="ClasstowhichAdmissionissought" required />
           </div>
           <div>
             <p style={{marginLeft:"30px"}}> <span><h4>b,</h4></span> Mother tongue of the Pupil</p>
-            <input type="text" name="user_Mtongue" required />
+            <input type="text" name="MothertongueofthePupil" required />
           </div>
           <div >
             <p style={{marginLeft:"30px"}}> <span><h4>c,</h4></span> School where the Pupil studied <br></br>
             Previously and the class
             </p>
-            <input type="text" name="user_Prevstudied" required />
+            <input type="text" name="SchoolwherethePupilstudiedPreviouslyandtheclass" required />
           </div>
           <div style={{marginBottom:"40px"}}>
             <p style={{marginLeft:"30px"}}> <span><h4>d,</h4></span> Position of the Pupil in the class <br></br>
             Rank / Grade
             </p>
-            <input type="text" name="user_classrank" required />
+            <input type="text" name="PositionofthePupilintheclassRank/Grade" required />
           </div>
          <div>
           <p>6. <span><h4>a,</h4></span>Nationality</p>
-          <input type="text" name="user_nationality" required  />
+          <input type="text" name="Nationality" required  />
          </div>
          <div style={{marginBottom:"40px"}}>
          <p style={{marginLeft:"30px"}}><span><h4>b,</h4></span>Religion</p>
-          <input type="text" name="user_religion" required/>
+          <input type="text" name="Religion" required/>
          </div>
          <div>
          <p>7.<span><h4>a,</h4></span>Father's Name and Qualification</p>
