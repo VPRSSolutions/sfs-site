@@ -9,47 +9,26 @@ import Navbar from "../Navbar/Navbar";
 
 // export let newClassDetail;
 const RegisterForm = () => {
-  const form = useRef();
 
-  const sendEmail = (e) => {
-    e.preventDefault();
-
-
-    
-    const pincode  = form.current.user_pincode.value.trim(); // Corrected the field name to user_phone
-
-    // Check if the phone number is exactly 10 digits
-    if (!/^\d{6}$/.test(pincode)) {
-      // If the phone number is not exactly 10 digits, display an error message
-      toast.error("Please check your Pincode");
-      return; // Exit the function early
-    }
-
-    const phoneNumber = form.current.user_number.value.trim(); // Corrected the field name to user_phone
-
-    // Check if the phone number is exactly 10 digits
-    if (!/^\d{10}$/.test(phoneNumber)) {
-      // If the phone number is not exactly 10 digits, display an error message
-      toast.error("Please enter a 10-digit phone number");
-      return; // Exit the function early
-    }
-
-
-    emailjs
-      .sendForm("service_qpoixqc", "template_0fozlbo", form.current, {
-        publicKey: "gmkXX07K07JyAIAF2",
+  function Submit(e) {
+    const formEle = document.querySelector("staff-form");
+    const formDatab = new FormData(formEle);
+    fetch(
+      "https://script.google.com/macros/s/AKfycbztqtYLSLTk_dIJbfvjMaqQl1X4f3_SRe_TKHA9tvcfCI8wdGJ0GzBGBU7qeDeR0n1taw/exec",
+      {
+        method: "POST",
+        body: formDatab
+      }
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
       })
-      .then(
-        () => {
-          console.log("SUCCESS!");
-          toast.success("Your Application Successfully Submitted");
-        },
-        (error) => {
-          console.log("FAILED...", error.text);
-          toast.error("Please Check Your Application");
-        }
-      );
-  };
+      .catch((error) => {
+        console.log(error);
+      });
+  }
+
   return (
     <div className="main">
       <Navbar/>
@@ -68,7 +47,7 @@ const RegisterForm = () => {
         </div>
       </div>
 
-      <form className="staff-form" ref={form} onSubmit={sendEmail}>
+      <form className="staff-form" onSubmit={(e) => Submit(e)}>
         <div className="forms">
 
           <div>
