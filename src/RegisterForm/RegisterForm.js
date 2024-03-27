@@ -2,14 +2,14 @@ import "./RegisterForm.css";
 import logo from "../images/logo.png";
 import Footer from "../Footer/Footer";
 import Navbar from "../Navbar/Navbar";
-
+import { toast } from "react-toastify";
 
 // export let newClassDetail;
 const RegisterForm = () => {
 
   function Submit(e) {
     e.preventDefault();
-    
+
     const formEle = document.querySelector("staff-form");
     const formDatab = new FormData(formEle);
     fetch(
@@ -22,9 +22,11 @@ const RegisterForm = () => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
+        toast.success("submitted")
       })
       .catch((error) => {
         console.log(error);
+        toast.success("error")
       });
   }
 
