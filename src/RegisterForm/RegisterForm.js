@@ -1,7 +1,4 @@
 import "./RegisterForm.css";
-import { toast } from "react-toastify";
-import React, { useRef } from "react";
-import emailjs from "@emailjs/browser";
 import logo from "../images/logo.png";
 import Footer from "../Footer/Footer";
 import Navbar from "../Navbar/Navbar";
@@ -14,7 +11,7 @@ const RegisterForm = () => {
     const formEle = document.querySelector("staff-form");
     const formDatab = new FormData(formEle);
     fetch(
-      "https://script.google.com/macros/s/AKfycbw8uEm-6Ilg9n8SztRp0k0N25hZUF8KFo4nHvibs5_l1DGlLSFdADm_2xSQHPl-DDA7Cw/exec",
+      "https://script.google.com/macros/s/AKfycbwUf2gVAeHF4PavCDoDF02XEdZmVbCm9oqxsLx6RDaeBUBFDIt4rs4b3gPv8phVEXgSfA/exec",
       {
         method: "POST",
         body: formDatab
