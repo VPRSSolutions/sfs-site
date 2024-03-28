@@ -16,6 +16,10 @@
   display: flex;
   justify-content: space-between;
 }
+
+.content h1{
+  font-family: "Satisfy", cursive;
+}
 @media (max-width: 1100px) {
   .slide {
     flex-direction: column;
@@ -249,6 +253,10 @@
   justify-content: center;
   position: relative;
   background-color: rgba(0, 0, 0, 0.352);
+}
+
+.content h1{
+  font-family: "Cookie", cursive;
 }
 
 .content > p {
