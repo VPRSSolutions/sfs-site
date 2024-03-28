@@ -48,7 +48,11 @@
 }
 
 
-@media (max-width:600px) {
+
+
+
+
+@media (max-width:1024px) and (max-width:1366px) {
     .exam-message{
         width: 90%;
         text-align: justify
@@ -64,7 +68,7 @@
 
     .admission-points{
         font-size: 10px;
-        margin-left: 5%;
+        margin-left: 35%;
     }
     
     .admission-points h2{
@@ -112,7 +116,7 @@
     }
 }
 
-@media (max-width:1024px) and (max-width:1366px) {
+@media (max-width:600px) {
     .exam-message{
         width: 90%;
         text-align: justify
@@ -128,7 +132,7 @@
 
     .admission-points{
         font-size: 10px;
-        margin-left: 35%;
+        margin-left: 5%;
     }
     
     .admission-points h2{
