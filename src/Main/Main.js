@@ -33,7 +33,7 @@ function Main() {
   var navigate = useNavigate();
 
   const [typewriter] = useTypewriter({
-    words: ["Light..."],
+    words: ["Be a Desalite..."],
     loop: {},
     typeSpeed: 200,
     delaySpeed: 200,
@@ -88,7 +88,7 @@ function Main() {
                   <img className="slider-image" src={schl} alt="" />
                   <div className="content">
                     <h1 data-aos="zoom-in">
-                      Darkness To <br />
+                    To Excel,<br />
                       <span style={{ color: "#f6aa1c" }}>{typewriter}</span>
                     </h1>
                     <p data-aos="zoom-in">
@@ -106,7 +106,7 @@ function Main() {
                   <img className="slider-image" src={schl2} alt="" />
                   <div className="content">
                     <h1 data-aos="zoom-in">
-                      Darkness To <br />
+                    To Excel, <br />
                       <span style={{ color: "#f6aa1c" }}>{typewriter}</span>
                     </h1>
                     <p data-aos="zoom-in">
@@ -127,7 +127,7 @@ function Main() {
                   <img className="slider-image" src={schl3} alt="" />
                   <div className="content">
                     <h1 data-aos="zoom-in">
-                      Darkness To <br />
+                    To Excel, <br />
                       <span style={{ color: "#f6aa1c" }}>{typewriter}</span>
                     </h1>
                     <p data-aos="zoom-in">
@@ -146,7 +146,7 @@ function Main() {
                   <img className="slider-image" src={schl4} alt="" />
                   <div className="content">
                     <h1 data-aos="zoom-in">
-                      Darkness To <br />
+                    To Excel, <br />
                       <span style={{ color: "#f6aa1c" }}>{typewriter}</span>
                     </h1>
                     <p data-aos="zoom-in">
