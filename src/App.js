@@ -7,11 +7,13 @@ import 'swiper/swiper-bundle.css';
 
 
 
+
 function App() {
 
   
 
   return (
+    
     <div>
       <Navbar />
       <Main />

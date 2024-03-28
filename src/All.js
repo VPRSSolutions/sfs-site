@@ -17,6 +17,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import Aboutdetail from "../src/About/Aboutdetail"
 import Onlinepayment from './Onlinepayment/Onlinepayment';
+import Examdetails from './RegisterForm/Examdetails';
 
 function All(){
     useEffect(() => {
@@ -39,7 +40,8 @@ function All(){
         <Route path='/Contact' element={<Conact/>}/>      
         <Route path='/RegisterForm' element={<RegisterForm/>}/>
         <Route path='/Principalmessage' element={<Message/>}/>      
-        <Route path='/Aboutschool' element={<Aboutdetail/>}/>      
+        <Route path='/Aboutschool' element={<Aboutdetail/>}/> 
+        <Route path='/Examdetails' element={<Examdetails/>}/>      
     </Routes>
     </BrowserRouter>
         </div>

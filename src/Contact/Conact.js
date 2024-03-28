@@ -2,42 +2,56 @@ import "./Conact.css";
 import { toast } from "react-toastify";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
-import emailjs from '@emailjs/browser';
-import React, { useRef } from 'react';
+
 
 const Conact = () => {
 
-  const form = useRef();
-
-  const sendEmail = (e) => {
+  function Submit(e) {
     e.preventDefault();
+    const formEle = document.querySelector("form");
+    const formData = new FormData(formEle);
+    const phoneNumber = formData.get("Number");
 
+    // Check if all fields are filled
+    let allFieldsFilled = true;
+    formData.forEach((value) => {
+      if (value.trim() === "") {
+        allFieldsFilled = false;
+        return;
+      }
+    });
 
-    const phoneNumber = form.current.user_call.value.trim(); // Corrected the field name to user_phone
-
-    // Check if the phone number is exactly 10 digits
-    if (!/^\d{10}$/.test(phoneNumber)) {
-      // If the phone number is not exactly 10 digits, display an error message
-      toast.error("Please enter a 10-digit phone number");
-      return; // Exit the function early
+    if (!allFieldsFilled) {
+      toast.error("Please fill in all fields");
+      return;
     }
-  
 
-    emailjs
-      .sendForm('service_qpoixqc', 'template_74uj766', form.current, {
-        publicKey: 'gmkXX07K07JyAIAF2',
-      })
-      .then(
-        () => {
-          console.log("SUCCESS!");
-          toast.success("Your Message Successfully Submitted");
-        },
-        (error) => {
-          console.log("FAILED...", error.text);
-          toast.error("Please Check Your Message");
+    // Check if phone number is 10 digits
+    if (phoneNumber.length !== 10 || isNaN(phoneNumber)) {
+      toast.error("Please enter a valid 10-digit phone number");
+      return;
+    }
+
+    // If all validations pass, submit the form
+    fetch(
+      "https://script.google.com/macros/s/AKfycbzMsJvL5peXCcBJw0ITCiUPHZjvI69ZjVT9XVFipo8Fbs-j7nUCHWrHfuUWQKqTD67rxw/exec",
+      {
+        method: "POST",
+        body: formData,
+      }
+    )
+      .then((response) => {
+        if (response.ok) {
+          toast.success("Successfully Submitted");
+        } else {
+          toast.error("Failed to submit form. Please try again later.");
         }
-      );
-  };
+      })
+      .catch((error) => {
+        console.error("Error submitting form:", error);
+        toast.error("An error occurred. Please try again later.");
+      });
+  }
   return (
    <div>
     <Navbar/>
@@ -64,23 +78,23 @@ const Conact = () => {
           <p>East, 4th Street, Kalif Nagar, Diamond Nagar, Pudukkottai, Tamil Nadu 622001</p>
         </div>
       </div>
-      <form data-aos="fade-down-Right" className="right" ref={form} onSubmit={sendEmail}>
+      <form data-aos="fade-down-Right" className="right" onSubmit={(e) => Submit(e)}>
         <div className="input">
           <div class="input-1">
-            <input type="text" id="name" name="user_name" required />
+            <input type="text" id="name" name="Name" required />
             <label for="name" class="name">
               Name *
             </label>
           </div>
           <div class="input-2">
-            <input type="number" id="number" name="user_call" required />
+            <input type="number" id="number" name="Number" required />
             <label for="number" class="number">
               Number *
             </label>
           </div>
         </div>
         <div className="textarea">
-          <textarea rows={6} placeholder="Text Your Message *"  name="user_msg" required></textarea>
+          <textarea rows={6} placeholder="Text Your Message *"  name="TextYourMessage" required></textarea>
         </div>
         <input type="submit" value="Send" className="butt"/>
       </form>

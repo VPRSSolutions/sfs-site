@@ -1,0 +1,145 @@
+.exam-message {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  margin-top: 4vw;
+}
+
+.exam-head {
+  font-size: 20px;
+  font-weight: 550;
+}
+
+.addmission-details {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 4vw;
+  color: red;
+}
+
+.admission-points {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  margin-left: 37%;
+  margin-top: 1vw;
+  margin-bottom: 50px;
+}
+
+.sub-titile{
+    margin-left: 30px;
+}
+
+.sub-titile2{
+    margin-left: 30px;
+}
+
+.admission-points h2{
+    padding-bottom: 10px;
+    width: 60%;
+}
+
+.sub-titile h4{
+    font-size: 18px;
+    padding-bottom: 10px;
+}
+
+
+@media (max-width:600px) {
+    .exam-message{
+        width: 90%;
+        text-align: justify
+    }
+
+    .addmission-details{
+        font-size: 10px;
+    }
+
+    .exam-head{
+        font-size: 16px;
+    }
+
+    .admission-points{
+        font-size: 10px;
+        margin-left: 5%;
+    }
+    
+    .admission-points h2{
+        width: 100%;
+        font-size: 15px;
+    }
+
+    .sub-titile h4 {
+        font-size: 13px;
+    }
+    .sub-titile p{
+        font-size: 12px;
+    }
+}
+
+@media (max-width:768px) {
+    .exam-message{
+        width: 90%;
+        text-align: justify
+    }
+
+    .addmission-details{
+        font-size: 10px;
+    }
+
+    .exam-head{
+        font-size: 16px;
+    }
+
+    .admission-points{
+        font-size: 10px;
+        margin-left: 25%;
+    }
+    
+    .admission-points h2{
+        width: 100%;
+        font-size: 15px;
+    }
+
+    .sub-titile h4 {
+        font-size: 13px;
+    }
+    .sub-titile p{
+        font-size: 12px;
+    }
+}
+
+@media (max-width:1024px) and (max-width:1366px) {
+    .exam-message{
+        width: 90%;
+        text-align: justify
+    }
+
+    .addmission-details{
+        font-size: 10px;
+    }
+
+    .exam-head{
+        font-size: 16px;
+    }
+
+    .admission-points{
+        font-size: 10px;
+        margin-left: 35%;
+    }
+    
+    .admission-points h2{
+        width: 100%;
+        font-size: 15px;
+    }
+
+    .sub-titile h4 {
+        font-size: 13px;
+    }
+    .sub-titile p{
+        font-size: 12px;
+    }
+}
