@@ -52,6 +52,7 @@ export default function RegisterForm() {
       .then((response) => {
         if (response.ok) {
           toast.success("Thank You for Your Registration Successfully Submitted");
+          window.scrollTo(0, 0);
           navigate("/Examdetails"); // Redirect to success page if needed
         } else {
           toast.error("Failed to submit form. Please try again later.");
@@ -132,10 +133,9 @@ export default function RegisterForm() {
           </div>
           <div>
             <p style={{ marginLeft: "30px" }}>
-              {" "}
               <span>
                 <h4>c,</h4>
-              </span>{" "}
+              </span>
               School where the Pupil studied <br></br>
               Previously and the class
             </p>
@@ -143,10 +143,10 @@ export default function RegisterForm() {
           </div>
           <div style={{ marginBottom: "40px" }}>
             <p style={{ marginLeft: "30px" }}>
-              {" "}
+  
               <span>
                 <h4>d,</h4>
-              </span>{" "}
+              </span>
               Position of the Pupil in the class <br></br>
               Rank / Grade
             </p>
@@ -154,7 +154,7 @@ export default function RegisterForm() {
           </div>
           <div>
             <p>
-              6.{" "}
+              6.
               <span>
                 <h4>a,</h4>
               </span>
@@ -251,7 +251,7 @@ export default function RegisterForm() {
           </div>
           <div>
             <p>
-              11.{" "}
+              11.
               <span>
                 <h4>a,</h4>
               </span>

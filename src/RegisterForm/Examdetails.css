@@ -4,6 +4,9 @@
   flex-direction: column;
   width: 60%;
   margin-top: 4vw;
+  background: #f6aa1c;
+  padding: 20px;
+  border-radius: 5px
 }
 
 .exam-head {
@@ -119,8 +122,16 @@
 @media (max-width:600px) {
     .exam-message{
         width: 90%;
-        text-align: justify
+        text-align: justify;
+        background: #f6aa1c;
+        padding: 10px;
+        border-radius: 5px
     }
+
+        .exam-message p {
+            font-size: 14px;
+        }
+    
 
     .addmission-details{
         font-size: 10px;
