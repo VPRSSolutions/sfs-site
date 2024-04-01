@@ -272,8 +272,8 @@ export default function RegisterForm() {
 
           <div>
             <p>
-              12. Will the pupil stay with parents or gardian, if<br></br>
-              with the gardian, his / her address
+              12. Will the pupil stay with parents or guardian, if<br></br>
+              with the guardian, his / her address
             </p>
             <input type="text" name="GardianNameAddress" required />
           </div>
