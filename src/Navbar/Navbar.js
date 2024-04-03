@@ -47,10 +47,13 @@ function Navbar() {
           Admissions open for the Academics year 2024-2025
           </div>
           <div className="sliding-text">
-          KinderGarden Graduation Day - 28.03.2024
+          TC Application: Friday (05.04.23) is the last date
           </div>
           <div className="sliding-text">
           Annual exam begins on 2nd April
+          </div>
+          <div className="sliding-text">
+          First Entrance Exam for the new admission: 06.04.23
           </div>
         </div>
       </div>
