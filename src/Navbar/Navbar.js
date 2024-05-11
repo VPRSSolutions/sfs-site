@@ -47,14 +47,14 @@ function Navbar() {
           Admissions open for the Academics year 2024-2025
           </div>
           <div className="sliding-text">
-          TC Application: Friday (05.04.23) is the last date
+          12th Re-Totalling and Revaluation approach the school office before 10.05.24
           </div>
           <div className="sliding-text">
-          Annual exam begins on 2nd April
+          Collection of Results and Fees Bank Challan on 11.05.24 from 9.30 to 12.30
           </div>
-          <div className="sliding-text">
+          {/* <div className="sliding-text">
           First Entrance Exam for the new admission: 06.04.23
-          </div>
+          </div> */}
         </div>
       </div>
       <div className="center">
